@@ -1,4 +1,5 @@
 document.addEventListener("deviceready", onDeviceReady, false);
+telSTR = 0;
 
 
 gpsListo = false;
@@ -143,8 +144,6 @@ function empezarEnvio(){
 	setTimeout(empezarEnvio, 10000);
 }
 
-
-
 function activarUbicacion(){
 	console.log("activar ubicacion");
 	cordova.plugins.diagnostic.isLocationEnabled(function (locationEnabled){
@@ -168,8 +167,9 @@ function activarUbicacion(){
 
 function prepararDatos(){
 	console.log("ubicando datos");
-	// Celular
-	var telSTR = "1123992995";
+
+	telSTR = document.getElementById("caja2InputId").value;
+	console.log(telSTR);
 
 	// Fecha y Hora
 	var d = new Date();
@@ -183,7 +183,7 @@ function prepararDatos(){
 	var fechaSTR = anio.concat(mes, dia, hora, minutos, segundos);
 
 	// Numero de evento
-	var panSTR = "20";
+	var panSTR = "1";
 
 	navigator.geolocation.getCurrentPosition(
     	function(position){
