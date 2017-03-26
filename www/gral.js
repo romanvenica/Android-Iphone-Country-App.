@@ -4,6 +4,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 gpsListo = false;
 
 function onDeviceReady() {
+	///// Plugin para que corra en segundo plano /////
+	cordova.plugins.backgroundMode.enable();
+	///// cordova.plugins.backgroundMode.overrideBackButton(); /////
 	if(window.MobileAccessibility){
         window.MobileAccessibility.usePreferredTextZoom(false);
     }
@@ -137,6 +140,7 @@ function irPantallaUbicacion(){
 
 function empezarEnvio(){
 	prepararDatos();
+	cordova.plugins.backgroundMode.isActive();
 	setTimeout(empezarEnvio, 10000);
 }
 
