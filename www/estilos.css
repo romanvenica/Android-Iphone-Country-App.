@@ -1,0 +1,95 @@
+html, body{
+	height: 100%;
+	background-color: black;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.oculto{
+	display: none;
+}
+
+/*Pantalla Principal*/
+
+#pantallaPrincipal{
+	height: 100%;
+}
+
+#cajaImagenTitulo{
+}
+
+#caja2ImagenTitulo{
+	width: 70%;
+	left: 15%;
+	position: relative;
+}
+
+#imagenIconoRastreo{
+	max-width: 100%;
+}
+
+#cajaInputId{
+	height: 8%;
+	margin-top: 10%;
+}
+
+#caja2InputId{
+	width: 60%;
+	left: 20%;
+	position: relative;
+	background-color: black;
+	height: 100%;
+	border-style: solid;
+	box-sizing: border-box;
+	border-color: gray;
+	color: gray;
+	text-align: center;
+	outline: none;
+	font-size: 25px;
+	font-family: 'Arial';
+}
+
+#cajaBotonActivarUbicacion{
+	margin-top: 16%;
+	height: 18%;
+}
+
+#caja2BotonActivarUbicacion{
+	position: relative;
+	left: 25%;
+	width: 50%;
+	height: 100%;
+	border-radius: 50%;
+	border-color: red;
+	border-style: solid;
+	border-width: 3px;
+	display: table;
+}
+
+#textoActivarUbicacion{
+	color: white;
+	font-family: 'Arial';
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: gray;
+	font-size: 20px;
+}
+
+/*Fin Pantalla Principal*/
+
+/*Pantalla Ubicacion*/
+
+#pantallaUbicacion{
+	height: 100%;
+}
+
+#engranaje{
+	color: white;
+	height: 7%;
+	right: 0%;
+	position: absolute;
+}
