@@ -4,6 +4,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 gpsListo = false;
 
 function onDeviceReady() {
+	StatusBar.styleBlackTranslucent();
 	///// Plugin para que corra en segundo plano /////
 	cordova.plugins.backgroundMode.enable();
 	///// cordova.plugins.backgroundMode.overrideBackButton(); /////
