@@ -26,12 +26,14 @@
     <plugin name="cordova-plugin-geolocation" spec="2.4.1" />
     <plugin spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" source="git" />
     <plugin spec="https://github.com/katzer/cordova-plugin-background-mode" source="git" />
-    
+    <plugin spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git" />
+
 
 
     <platform name="ios">
         <preference name="DisallowOverscroll" value="true" />
         <preference name="UIWebViewBounce" value="false" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
     </platform>
 
     <platform name="android">

@@ -140,7 +140,6 @@ function irPantallaUbicacion(){
 
 function empezarEnvio(){
 	prepararDatos();
-	cordova.plugins.backgroundMode.isActive();
 	setTimeout(empezarEnvio, 10000);
 }
 
