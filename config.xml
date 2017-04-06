@@ -27,6 +27,7 @@
     <plugin spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" source="git" />
     <plugin spec="https://github.com/katzer/cordova-plugin-background-mode" source="git" />
     <plugin spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git" />
+    
 
     <platform name="ios">
         <preference name="DisallowOverscroll" value="true" />

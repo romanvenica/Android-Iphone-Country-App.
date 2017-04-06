@@ -7,10 +7,13 @@ gpsListo = false;
 function onDeviceReady() {
 	///// Plugin para que corra en segundo plano /////
 	cordova.plugins.backgroundMode.enable();
-	///// cordova.plugins.backgroundMode.overrideBackButton(); /////
+	///// Plugin para que no se cierre con el boton de atras /////
+	cordova.plugins.backgroundMode.overrideBackButton();
+	///// Plugin para que no lo afecten las opciones de accesibilidad /////
 	if(window.MobileAccessibility){
         window.MobileAccessibility.usePreferredTextZoom(false);
     }
+    ///// Aca sabe si empezar el camino Android o IOS /////
 	if(device.platform == "Android"){
 			caminoAndroid();
 	}else if (device.platform == "iOS"){
@@ -141,7 +144,7 @@ function irPantallaUbicacion(){
 
 function empezarEnvio(){
 	prepararDatos();
-	setTimeout(empezarEnvio, 10000);
+	setTimeout(empezarEnvio, 180000);
 }
 
 function activarUbicacion(){
@@ -176,7 +179,7 @@ function prepararDatos(){
 	var anio = d.getFullYear().toString();
 	var mesSF = d.getMonth()+1;
 	var mes = ("0"+mesSF).slice(-2);
-	var dia = ("0"+d.getDate()).slice(-2);
+	var dia = ("0"+d.getDate()).slice(-2);	
 	var hora = ("0"+d.getHours()).slice(-2);
 	var minutos = ("0"+d.getMinutes()).slice(-2);
 	var segundos = ("0"+d.getSeconds()).slice(-2);
